@@ -1,0 +1,2193 @@
+{
+	"info": {
+		"_postman_id": "41be8a4c-c13f-4376-9f28-03d85da93e6b",
+		"name": "Toronto Fitness Club",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19380013"
+	},
+	"item": [
+		{
+			"name": "ACCOUNT",
+			"item": [
+				{
+					"name": "Register an account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testuser",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testuser@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"register",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "John Doe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "testuser",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "testuser@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "pass",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Doe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:09:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "236"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"password\": \"pbkdf2_sha256$390000$axgbp7Ixgt2nGuN5N8qWpt$7xRsJXG1K/btieNEn3SQ7E6TjQlcw1KIyE28cYMcUls=\",\n    \"email\": \"testuser@gmail.com\",\n    \"username\": \"testuser\",\n    \"avatar\": null,\n    \"phone_number\": \"xxx-xxx-xxxx\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login / Get access token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testuser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "testuser",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "pass",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:17:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2ODk2MTA3OCwiaWF0IjoxNjY4ODc0Njc4LCJqdGkiOiJlMmVhOTc4MjA3MTY0OGI4OTIxZDQzY2M0ZjhjNjRmYyIsInVzZXJfaWQiOjN9.9-WnVAYS-vsFStqX57XdrmGHEtEKc0GasHF87hEn5GM\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODg1NDc4LCJpYXQiOjE2Njg4NzQ2NzgsImp0aSI6IjU3M2FiZGVhZjM2YjQ3NDA4ZTNiNDI3NzE0MDhjNzBkIiwidXNlcl9pZCI6M30.WPkZ3klKo9e6Bj81XFwqfI0S8_YTrG9x9jd-tOPCm7Q\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a user's profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/{{user_id}}/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"{{user_id}}",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a user's profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/{{user_id}}/profile/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"{{user_id}}",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:26:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"\",\n    \"avatar\": null,\n    \"phone_number\": \"xxx-xxx-xxxx\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User can edit their profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Bob",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Smith",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/{{user_id}}/profile/edit/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"{{user_id}}",
+								"profile",
+								"edit",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User can edit their profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Bob",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Smith",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/{{user_id}}/profile/edit/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"{{user_id}}",
+										"profile",
+										"edit",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:32:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"first_name\": \"Bob\",\n    \"last_name\": \"Smith\",\n    \"email\": \"testuser@gmail.com\",\n    \"avatar\": null,\n    \"phone_number\": \"xxx-xxx-xxxx\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User can create a card for themselves",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Bob",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "test address",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "123-456-7890",
+									"type": "text"
+								},
+								{
+									"key": "card_number",
+									"value": "1234123412341234",
+									"type": "text"
+								},
+								{
+									"key": "card_expiry",
+									"value": "2024-03-03",
+									"type": "text"
+								},
+								{
+									"key": "card_cvv",
+									"value": "434",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/card/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"card",
+								"create",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save card",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Bob",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Smith",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "test address",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "123-456-7890",
+											"type": "text"
+										},
+										{
+											"key": "card_number",
+											"value": "1234123412341234",
+											"type": "text"
+										},
+										{
+											"key": "card_expiry",
+											"value": "2024-03-03",
+											"type": "text"
+										},
+										{
+											"key": "card_cvv",
+											"value": "434",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/card/create/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"card",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:35:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Bob\",\n    \"last_name\": \"Smith\",\n    \"address\": \"test address\",\n    \"phone_number\": \"123-456-7890\",\n    \"card_number\": 1234123412341234,\n    \"card_expiry\": \"2024-03-03\",\n    \"card_cvv\": 434\n}"
+						}
+					]
+				},
+				{
+					"name": "User can edit their card",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Bob",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "test address",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "123-456-7890",
+									"type": "text"
+								},
+								{
+									"key": "card_number",
+									"value": "999999999999",
+									"type": "text"
+								},
+								{
+									"key": "card_expiry",
+									"value": "2024-05-04",
+									"type": "text"
+								},
+								{
+									"key": "card_cvv",
+									"value": "111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/card/update/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"card",
+								"update",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User can edit their card",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Bob",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Smith",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "test address",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "123-456-7890",
+											"type": "text"
+										},
+										{
+											"key": "card_number",
+											"value": "999999999999",
+											"type": "text"
+										},
+										{
+											"key": "card_expiry",
+											"value": "2024-05-04",
+											"type": "text"
+										},
+										{
+											"key": "card_cvv",
+											"value": "111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/card/update/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"card",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:39:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Bob\",\n    \"last_name\": \"Smith\",\n    \"address\": \"test address\",\n    \"phone_number\": \"123-456-7890\",\n    \"card_number\": 999999999999,\n    \"card_expiry\": \"2024-05-04\",\n    \"card_cvv\": 111\n}"
+						}
+					]
+				},
+				{
+					"name": "Get the payment history of a user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/payments-history/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"payments-history",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get the payment history of a user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/payments-history/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"payments-history",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:40:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "User can get the next payment to come",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/payments-future/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"payments-future",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User can get the next payment to come",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/accounts/payments-future/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"accounts",
+										"payments-future",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:42:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User can edit/cancel their subscription",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/update-subscription/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"update-subscription",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get classes of a user sorted chronologically",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/class-bookings-list/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"class-bookings-list",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STUDIO",
+			"item": [
+				{
+					"name": "Get studios sorted based on given user location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/all/?latitude=43&longitude=123",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"all",
+								""
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "43"
+								},
+								{
+									"key": "longitude",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get studios sorted based on given user location",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/all/?latitude=43&longitude=123",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"all",
+										""
+									],
+									"query": [
+										{
+											"key": "latitude",
+											"value": "43"
+										},
+										{
+											"key": "longitude",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:50:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "613"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Studio Sas\",\n            \"images\": [],\n            \"postal_code\": \"test\",\n            \"phone_number\": \"123\",\n            \"address\": \"test\",\n            \"amenities\": [],\n            \"classes\": []\n        },\n        {\n            \"name\": \"Studio Manitoba\",\n            \"images\": [],\n            \"postal_code\": \"test\",\n            \"phone_number\": \"123\",\n            \"address\": \"test\",\n            \"amenities\": [],\n            \"classes\": []\n        },\n        {\n            \"name\": \"Studio One\",\n            \"images\": [\n                {\n                    \"image\": \"/media/studios/bingchilling_fQJBmFI.jpeg\"\n                },\n                {\n                    \"image\": \"/media/studios/hi_KPWKP77.jpeg\"\n                }\n            ],\n            \"postal_code\": \"test postal code\",\n            \"phone_number\": \"123\",\n            \"address\": \"test address\",\n            \"amenities\": [\n                {\n                    \"type\": \"Track\",\n                    \"quantity\": 2\n                }\n            ],\n            \"classes\": [\n                {\n                    \"name\": \"Yoga\"\n                },\n                {\n                    \"name\": \"Running\"\n                },\n                {\n                    \"name\": \"HIIT\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Use search and filters for studios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/all/filter/?search=one&name=Studio One&address=test address",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"all",
+								"filter",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "one",
+									"description": "parameter to enter search field for studio (partial matches allowed)"
+								},
+								{
+									"key": "name",
+									"value": "Studio One",
+									"description": "studio FILTER (exact match)"
+								},
+								{
+									"key": "address",
+									"value": "test address",
+									"description": "studio FILTER (exact match)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Use search and filters for studios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/all/filter/?search=one&name=Studio One&address=test address",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"all",
+										"filter",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "one",
+											"description": "parameter to enter search field for studio (partial matches allowed)"
+										},
+										{
+											"key": "name",
+											"value": "Studio One",
+											"description": "studio FILTER (exact match)"
+										},
+										{
+											"key": "address",
+											"value": "test address",
+											"description": "studio FILTER (exact match)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:53:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "366"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Studio One\",\n            \"images\": [\n                {\n                    \"image\": \"/media/studios/bingchilling_fQJBmFI.jpeg\"\n                },\n                {\n                    \"image\": \"/media/studios/hi_KPWKP77.jpeg\"\n                }\n            ],\n            \"postal_code\": \"test postal code\",\n            \"phone_number\": \"123\",\n            \"address\": \"test address\",\n            \"amenities\": [\n                {\n                    \"type\": \"Track\",\n                    \"quantity\": 2\n                }\n            ],\n            \"classes\": [\n                {\n                    \"name\": \"Yoga\"\n                },\n                {\n                    \"name\": \"Running\"\n                },\n                {\n                    \"name\": \"HIIT\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get specific studio with its id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"{{studio_id}}",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get specific studio with its id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"{{studio_id}}",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:54:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Studio One\",\n    \"address\": \"test address\",\n    \"point\": {\n        \"latitude\": 43.6,\n        \"longitude\": 79.38\n    },\n    \"postal_code\": \"test postal code\",\n    \"phone_number\": \"123\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a specific studios UPCOMING classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"{{studio_id}}",
+								"classes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a specific studios UPCOMING classes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"{{studio_id}}",
+										"classes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 16:55:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"HIIT\",\n            \"description\": \"test\",\n            \"coach\": \"test\",\n            \"capacity\": 15,\n            \"start_time\": \"2022-11-23T12:28:28Z\",\n            \"end_time\": \"2022-11-23T13:28:33Z\",\n            \"studio\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "User can enroll in a class",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "class_id",
+									"value": "{{class_id}}",
+									"description": "must pass in body variable",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/{{class_id}}/enrol/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"{{studio_id}}",
+								"classes",
+								"{{class_id}}",
+								"enrol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User can drop a class",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/{{class_id}}/drop/{{class_booking_id}}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"{{studio_id}}",
+								"classes",
+								"{{class_id}}",
+								"drop",
+								"{{class_booking_id}}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User can search/filter classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/filter/?name=HIIT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"{{studio_id}}",
+								"classes",
+								"filter",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "HI",
+									"description": "search param for classes",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "HIIT",
+									"description": "filter exact match for name attribute"
+								},
+								{
+									"key": "name",
+									"value": "Running",
+									"description": "filter exact match for name attribute",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "nothing",
+									"description": "search param for classes",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User can search/filter classes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/{{studio_id}}/classes/filter/?name=HIIT",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"{{studio_id}}",
+										"classes",
+										"filter",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "HI",
+											"description": "search param for classes",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "HIIT",
+											"description": "filter exact match for name attribute"
+										},
+										{
+											"key": "name",
+											"value": "Running",
+											"description": "filter exact match for name attribute",
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": "nothing",
+											"description": "search param for classes",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 17:04:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"HIIT\",\n            \"description\": \"test\",\n            \"coach\": \"test\",\n            \"capacity\": 15,\n            \"start_time\": \"2022-11-23T12:28:28Z\",\n            \"end_time\": \"2022-11-23T13:28:33Z\",\n            \"studio\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "User can see subscription plans available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/plans",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User can see specific subscription plan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/plans/{{subscription_plan_id}}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"plans",
+								"{{subscription_plan_id}}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User can subscribe to a plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "2022-11-19",
+									"type": "text"
+								},
+								{
+									"key": "next_date",
+									"value": "2022-11-26",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "14.99",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/studios/plans/{{subscription_plan_id}}/subscribe/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"studios",
+								"plans",
+								"{{subscription_plan_id}}",
+								"subscribe",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User can subscribe to a plan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2022-11-19",
+											"type": "text"
+										},
+										{
+											"key": "next_date",
+											"value": "2022-11-26",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "14.99",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "7",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/studios/plans/{{subscription_plan_id}}/subscribe/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"studios",
+										"plans",
+										"{{subscription_plan_id}}",
+										"subscribe",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 17:11:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"start_date\": \"2022-11-19\",\n    \"next_date\": \"2022-11-26\",\n    \"price\": 14.99,\n    \"duration\": 7,\n    \"status\": \"active\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MISC",
+			"item": [
+				{
+					"name": "API DOCUMENTATIONS",
+					"item": [
+						{
+							"name": "schema yaml",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/schema/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"schema",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "swagger-ui",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/schema/swagger-ui/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"schema",
+										"swagger-ui",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "redoc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/schema/redoc/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"schema",
+										"redoc",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin panel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/admin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
