@@ -44,8 +44,6 @@ const PlansEdit = () => {
   return (
     <Grow in>
       <Box sx={{ margin: '2rem 2rem' }}>
-        {console.log('plans: ', plans)}
-        {console.log('subscriptio: ', subscription)}
         {plans.length !== 0 && (
           <Box
             sx={{

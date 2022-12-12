@@ -63,8 +63,6 @@ const ClassCard = ({ studio_id, studioclass }) => {
   return (
     <Grow in>
       <Box sx={styles.infoBox}>
-        {console.log('studio class id : ', studioclass?.id)}
-        {console.log('studio_id: ', studio_id)}
         <List sx={{ textAlign: 'center' }}>
           <ListItem>
             <ListItemText

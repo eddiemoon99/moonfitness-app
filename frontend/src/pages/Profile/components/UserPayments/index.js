@@ -44,8 +44,6 @@ const UserPayments = () => {
   return (
     <Grow in>
       <div>
-        {console.log('history: ', history)}
-        {console.log('future: ', future)}
         <Typography variant='h5' sx={{ textAlign: 'center', margin: '2rem 0' }}>
           Your Payments History:
         </Typography>

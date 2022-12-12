@@ -25,7 +25,7 @@ const Home = () => {
               marginBottom: '4rem',
             }}
           >
-            Toronto Fitness Club
+            Moon Fitness Club
           </Typography>
         </Box>
       </Box>

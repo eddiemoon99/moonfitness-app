@@ -83,8 +83,6 @@ const UserClasses = () => {
         <Typography variant='h5' sx={{ textAlign: 'center', margin: '2rem 0' }}>
           Your classes:
         </Typography>
-        {console.log('classes: ', classes)}
-        {console.log('curernt row: ', currentRow)}
         <TableContainer
           sx={{
             maxWidth: 800,
