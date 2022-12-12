@@ -208,6 +208,7 @@ const Login = () => {
 
                     <input
                       type='file'
+                      required
                       name='avatar'
                       accept='image/jpeg,image/png,image/gif'
                       onChange={(e) => {

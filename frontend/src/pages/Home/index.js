@@ -6,15 +6,28 @@ const Home = () => {
   return (
     <Grow in>
       <Box sx={styles.welcome}>
-        <Typography sx={styles.welcomeText} variant='h1'>
-          Welcome
-        </Typography>
-        <Typography
-          variant='h5'
-          sx={{ ...styles.welcomeText, marginBottom: '4rem' }}
+        <Box
+          sx={{
+            width: 'fit-content',
+            margin: '4rem auto',
+            backdropFilter: 'brightness(60%)',
+            borderRadius: '2%',
+          }}
         >
-          Toronto Fitness Club
-        </Typography>
+          <Typography sx={styles.welcomeText} variant='h1'>
+            Welcome
+          </Typography>
+
+          <Typography
+            variant='h5'
+            sx={{
+              ...styles.welcomeText,
+              marginBottom: '4rem',
+            }}
+          >
+            Toronto Fitness Club
+          </Typography>
+        </Box>
       </Box>
     </Grow>
   );
