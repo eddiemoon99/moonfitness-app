@@ -1,6 +1,6 @@
 # moonfitness-app
 
-This repository contains the source code for a mock fitness club web application.
+This repository contains the source code for a mock fitness franchise web application.
 
 This application was created using React.js and Django.
 
