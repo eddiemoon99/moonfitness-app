@@ -12,5 +12,3 @@ Deployed using:
 See the app on:
 https://moonfitness.vercel.app
 
-
-
